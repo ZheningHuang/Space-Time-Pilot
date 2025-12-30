@@ -43,6 +43,52 @@ if (yearEl) {
   setTimeout(() => {
     playWithSound();
   }, 100);
+  
+  // Toggle BibTeX section
+  window.toggleBibtex = function() {
+    const bibtexSection = document.getElementById('bibtex-section');
+    if (!bibtexSection) return;
+    
+    const isCollapsed = bibtexSection.classList.contains('collapsed');
+    if (isCollapsed) {
+      bibtexSection.classList.remove('collapsed');
+      setTimeout(() => {
+        bibtexSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    } else {
+      bibtexSection.classList.add('collapsed');
+    }
+  };
+  
+  // Copy BibTeX function
+  window.copyBibtex = function() {
+    const bibtexContent = document.getElementById('bibtex-content');
+    if (!bibtexContent) return;
+    
+    const text = bibtexContent.textContent || bibtexContent.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.querySelector('.copy-bibtex-btn');
+      if (btn) {
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.style.background = '#059669';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '#2563eb';
+        }, 2000);
+      }
+    }).catch(err => {
+      console.error('Failed to copy:', err);
+      alert('Failed to copy BibTeX. Please select and copy manually.');
+    });
+  };
+  
+  // Prevent default for upcoming links
+  document.querySelectorAll('.bottom-link.upcoming').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+    });
+  });
 
   // Enable sound on any user interaction
   const enableSoundOnInteraction = () => {
@@ -90,8 +136,46 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Debug: Check if videos are found
+// Collapsible ablation section
 document.addEventListener('DOMContentLoaded', function() {
+  const ablationSection = document.getElementById('ablation');
+  const ablationToggle = document.querySelector('.ablation-toggle');
+  const ablationToggleBtn = document.getElementById('ablation-toggle');
+  
+  function toggleAblation() {
+    if (ablationSection) {
+      const isCollapsed = ablationSection.classList.contains('collapsed');
+      if (isCollapsed) {
+        ablationSection.classList.remove('collapsed');
+        if (ablationToggle) {
+          ablationToggle.setAttribute('aria-expanded', 'true');
+        }
+      } else {
+        ablationSection.classList.add('collapsed');
+        if (ablationToggle) {
+          ablationToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    }
+  }
+  
+  if (ablationToggle) {
+    ablationToggle.addEventListener('click', toggleAblation);
+  }
+  
+  // Handle ablation toggle from navigation
+  const navAblationToggle = document.getElementById('ablation-toggle');
+  if (navAblationToggle) {
+    navAblationToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      ablationSection?.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        toggleAblation();
+      }, 300);
+    });
+  }
+  
+  // Debug: Check if videos are found
   const ablationVideos = document.querySelectorAll('.ablation-video-item video');
   console.log('Found ablation videos:', ablationVideos.length);
   ablationVideos.forEach((video, idx) => {

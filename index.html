@@ -8,17 +8,43 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="#" class="logo-link">
+        <img src="log_name.png" alt="SpaceTimePilot" class="logo">
+        <span class="logo-text">SpaceTimePilot</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#demos">Results</a></li>
+        <li><a href="#dataset">Dataset</a></li>
+        <li><a href="#ar-demos">AR Demos</a></li>
+        <li><button id="ablation-toggle" class="nav-link-btn">Ablation</button></li>
+      </ul>
+    </div>
+  </nav>
+
   <header class="header">
-    <div class="research-badge">Limited-distribution research preview 🤫</div>
-    <h1>SpaceTimePilot: Generative Rendering of Dynamic Scenes Across Space and Time</h1>
-    <nav>
-      <a href="#heroVideo">Teaser Video</a>
-      <a href="#concept">Concept</a>
-      <a href="#demos">Demos</a>
-      <a href="#ablation">Ablation</a>
-      <a href="#dataset">Cam×Time Dataset</a>
-      <a href="#ar-demos">AR Demos</a>
-    </nav>
+    <div class="title-with-logo">
+      <div class="title-line-1">
+        <img src="logo-no-text.png" alt="SpaceTimePilot" class="header-logo-img">
+        <span class="title-main">SpaceTimePilot</span>
+      </div>
+      <div class="title-line-2">
+        <span class="title-subtitle">Generative Rendering of Dynamic Scenes Across Space and Time</span>
+      </div>
+    </div>
+    <div class="authors">
+      <p class="authors-line-1"><a href="https://zheninghuang.github.io/" target="_blank">Zhening Huang</a><sup>1,2</sup>, <a href="https://hyeonho99.github.io/" target="_blank">Hyeonho Jeong</a><sup>2</sup>, <a href="https://xuelin-chen.github.io/" target="_blank">Xuelin Chen</a><sup>2</sup>, <a href="https://research.adobe.com/person/yulia-gryaditskaya/" target="_blank">Yulia Gryaditskaya</a><sup>2</sup></p>
+      <p class="authors-line-2"><a href="https://tuanfeng.github.io/" target="_blank">Tuanfeng Y. Wang</a><sup>2</sup>, <a href="https://www.eng.cam.ac.uk/profiles/jl221" target="_blank">Joan Lasenby</a><sup>1</sup>, <a href="https://research.adobe.com/person/paulchhuang/" target="_blank">Chun-Hao Huang</a><sup>2</sup></p>
+      <p class="affiliations"><sup>1</sup><span class="affiliation-name">University of Cambridge</span>, <sup>2</sup><span class="affiliation-name">Adobe Research</span></p>
+    </div>
+    <div class="header-links">
+      <a href="#" class="header-link" id="paper-link" target="_blank">Paper</a>
+      <a href="#" class="header-link upcoming" id="code-link" target="_blank">Code <span class="upcoming-badge">Upcoming</span></a>
+      <button class="header-link" id="bibtex-btn" onclick="toggleBibtex()">BibTeX</button>
+      <a href="#" class="header-link upcoming" id="dataset-link" target="_blank">Dataset <span class="upcoming-badge">Upcoming</span></a>
+    </div>
     <p class="tldr">
       <strong>TLDR:</strong> SpaceTimePilot disentangles space and time in video diffusion model for controllable generative rendering. Given a single input video of a dynamic scene, SpaceTimePilot freely steers both camera viewpoint and temporal motion within the scene, enabling freely exploration across the 4D space–time domain.
     </p>
@@ -47,7 +73,7 @@
     </section>
 
     <section id="demos" class="section">
-      <h2>Video Demonstrations</h2>
+      <h2>Results</h2>
       <p class="section-intro">
         We present four temporal-trajectory examples, each paired with several arbitrary camera trajectories in the scene.
         <br>
@@ -270,10 +296,16 @@
       </div>
     </section>
 
-    <section id="ablation" class="section">
-      <h2>Ablation Studies</h2>
-      <p>Each video shows a stitched comparison: source video → camera and time trajectory → video sequence results.</p>
-      <p class="ablation-intro">Ablation studies reveal four key findings: <a href="#ablation-temporal-warping">1</a>, <a href="#ablation-1d-conv">2</a>, <a href="#ablation-camxtime">3</a>, <a href="#ablation-freeze-warping">4</a>.</p>
+    <section id="ablation" class="section ablation-section collapsed">
+      <div class="ablation-header">
+        <h2>Ablation Studies</h2>
+        <button class="ablation-toggle" aria-expanded="false">
+          <span class="toggle-icon">▼</span>
+        </button>
+      </div>
+      <div class="ablation-content">
+        <p>Each video shows a stitched comparison: source video → camera and time trajectory → video sequence results.</p>
+        <p class="ablation-intro">Ablation studies reveal four key findings: <a href="#ablation-temporal-warping">1</a>, <a href="#ablation-1d-conv">2</a>, <a href="#ablation-camxtime">3</a>, <a href="#ablation-freeze-warping">4</a>.</p>
 
       <div class="demo-group" id="ablation-temporal-warping">
         <h3>Effective Temporal Warping</h3>
@@ -854,6 +886,19 @@
     </section>
 
   </main>
+
+  <div id="bibtex-section" class="bibtex-section collapsed">
+    <div class="bibtex-container">
+      <h3>BibTeX</h3>
+      <pre id="bibtex-content"><code>@article{huang2025spacetimpilot,
+  title={SpaceTimePilot: Generative Rendering of Dynamic Scenes Across Space and Time},
+  author={Huang, Zhening and Jeong, Hyeonho and Chen, Xuelin and Gryaditskaya, Yulia and Wang, Tuanfeng Y. and Lasenby, Joan and Huang, Chun-Hao},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2025}
+}</code></pre>
+      <button class="copy-bibtex-btn" onclick="copyBibtex()">Copy BibTeX</button>
+    </div>
+  </div>
 
   <footer class="footer">
     <p>© <span id="year"></span> SpaceTimePilot Team. All rights reserved.</p>

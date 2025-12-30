@@ -16,6 +16,7 @@
       </a>
       <ul class="nav-menu">
         <li><a href="#concept">Concept</a></li>
+        <li><a href="#methods">Methods</a></li>
         <li><a href="#demos">Results</a></li>
         <li><a href="#dataset">Dataset</a></li>
         <li><a href="#ar-demos">AR Demos</a></li>
@@ -45,15 +46,15 @@
       <button class="header-link" id="bibtex-btn" onclick="toggleBibtex()">BibTeX</button>
       <a href="#" class="header-link upcoming" id="dataset-link" target="_blank">Dataset <span class="upcoming-badge">Upcoming</span></a>
     </div>
-    <p class="tldr">
-      <strong>TLDR:</strong> SpaceTimePilot disentangles space and time in video diffusion model for controllable generative rendering. Given a single input video of a dynamic scene, SpaceTimePilot freely steers both camera viewpoint and temporal motion within the scene, enabling freely exploration across the 4D space–time domain.
-    </p>
     <div class="hero-media">
       <video id="heroVideo" autoplay playsinline controls preload="auto">
-        <source src="assets/videos/SpaceTimePilot.mp4" type="video/mp4">
+        <source src="final_teaser.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
+    <p class="tldr">
+      <strong>TLDR:</strong> SpaceTimePilot disentangles space and time in video diffusion model for controllable generative rendering. Given a single input video of a dynamic scene, SpaceTimePilot freely steers both camera viewpoint and temporal motion within the scene, enabling freely exploration across the 4D space–time domain.
+    </p>
   </header>
 
   <main>
@@ -69,6 +70,16 @@
           <p><strong>4D multi-view models</strong> such as Cat4D <span class="cite">Wu et al., CVPR 2024</span> and Diffusion4D <span class="cite">Liang et al., NeurIPS 2024</span> synthesize discrete, sparse views conditioned on both space and time, but do not generate continuous temporal sequences.</p>
           <p><strong class="spacetimpilot-text">SpaceTimePilot</strong> enables free movement along both the camera and time axes with full control over direction and speed, supporting bullet-time, slow motion, reverse playback, and mixed space–time trajectories.</p>
         </div>
+      </div>
+    </section>
+
+    <section id="methods" class="section">
+      <h2>Methods</h2>
+      <p class="section-intro">
+        Temporal Warping Augmentation for Training: We introduce temporal warping augmentation to diversify temporal patterns in multi-view dynamic videos. Training on warped video pairs encourages disentanglement of camera motion (space) and scene dynamics (time) in video diffusion models.
+      </p>
+      <div class="methods-image">
+        <img src="twa_png.png" alt="Temporal Warping Augmentation" class="methods-img">
       </div>
     </section>
 
@@ -710,7 +721,7 @@
               <source src="assets/videos/grid_all_cam.mp4" type="video/mp4">
             </video>
             <p class="comparison-label">Full-Grid Rendering</p>
-            <p class="comparison-note">We do this for all of them.</p>
+            <p class="comparison-note">We do this for all captured animations.</p>
           </div>
         </div>
       </div>
@@ -858,25 +869,6 @@
               <p class="ar-frame-label">243 frames</p>
               <video autoplay loop muted playsinline preload="metadata">
                 <source src="assets/videos/ar_demos/video_22_cam_05_triple_angle_slow_motion_stitched_iterations_1-2-3.mp4" type="video/mp4">
-              </video>
-              <p class="ar-label">AR Demonstration</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="ar-demo-item">
-          <div class="ar-demo-video-pair">
-            <div class="ar-source-video">
-              <p class="ar-frame-label">81 frames</p>
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="assets/videos/ar_demos/video_27.mp4" type="video/mp4">
-              </video>
-              <p class="ar-label">Source Video</p>
-            </div>
-            <div class="ar-demo-video">
-              <p class="ar-frame-label">243 frames</p>
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="assets/videos/ar_demos/video_27_cam_09_triple_angle_slow_motion_stitched_iterations_1-2-3.mp4" type="video/mp4">
               </video>
               <p class="ar-label">AR Demonstration</p>
             </div>

@@ -41,8 +41,8 @@
       <p class="affiliations"><sup>1</sup><span class="affiliation-name">University of Cambridge</span>, <sup>2</sup><span class="affiliation-name">Adobe Research</span></p>
     </div>
     <div class="header-links">
-      <a href="#" class="header-link" id="paper-link" target="_blank">Paper</a>
-      <a href="#" class="header-link upcoming" id="code-link" target="_blank">Code <span class="upcoming-badge">Upcoming</span></a>
+      <a href="https://arxiv.org/abs/2512.25075" class="header-link" id="paper-link" target="_blank">Paper</a>
+      <a href="https://github.com/ZheningHuang/SpaceTimePilot" class="header-link" id="code-link" target="_blank">Code</a>
       <button class="header-link" id="bibtex-btn" onclick="toggleBibtex()">BibTeX</button>
       <a href="#" class="header-link upcoming" id="dataset-link" target="_blank">Dataset <span class="upcoming-badge">Upcoming</span></a>
     </div>
@@ -726,108 +726,6 @@
         </div>
       </div>
 
-      <div class="dataset-examples">
-        <h3>Sampling from CamxTime Dataset </h3>
-        <p>Sampling from full-grid rendering. We can sample freely—time/camera combination from the full grid.</p>
-        <div class="dataset-examples-rows">
-          <div class="dataset-example-row">
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AE01_006_ALL_cameras__Collection_Animation_18_mixamo__Character_Empty18_2__GenCam_arc_up_down_Cam0_UID59469ca7/forward.mp4" type="video/mp4">
-              </video>
-              <p>Forward</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AE01_006_ALL_cameras__Collection_Animation_18_mixamo__Character_Empty18_2__GenCam_arc_up_down_Cam0_UID59469ca7/fixed_10.mp4" type="video/mp4">
-              </video>
-              <p>Fixed at Frame 10</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AE01_006_ALL_cameras__Collection_Animation_18_mixamo__Character_Empty18_2__GenCam_arc_up_down_Cam0_UID59469ca7/reverse.mp4" type="video/mp4">
-              </video>
-              <p>Reverse</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AE01_006_ALL_cameras__Collection_Animation_18_mixamo__Character_Empty18_2__GenCam_arc_up_down_Cam0_UID59469ca7/bounce_40.mp4" type="video/mp4">
-              </video>
-              <p>Zigzag Motion</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AE01_006_ALL_cameras__Collection_Animation_18_mixamo__Character_Empty18_2__GenCam_arc_up_down_Cam0_UID59469ca7/start40_repeat_next.mp4" type="video/mp4">
-              </video>
-              <p>Slow Motion</p>
-            </div>
-          </div>
-          <div class="dataset-example-row">
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AI01_008_ALL_cameras__Collection_Animation_11_mixamo__Character_Empty11_1__GenCam_arc_Cam7_UIDdb56c51a/forward.mp4" type="video/mp4">
-              </video>
-              <p>Forward</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AI01_008_ALL_cameras__Collection_Animation_11_mixamo__Character_Empty11_1__GenCam_arc_Cam7_UIDdb56c51a/fixed_10.mp4" type="video/mp4">
-              </video>
-              <p>Fixed at Frame 10</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AI01_008_ALL_cameras__Collection_Animation_11_mixamo__Character_Empty11_1__GenCam_arc_Cam7_UIDdb56c51a/reverse.mp4" type="video/mp4">
-              </video>
-              <p>Reverse</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AI01_008_ALL_cameras__Collection_Animation_11_mixamo__Character_Empty11_1__GenCam_arc_Cam7_UIDdb56c51a/bounce_40.mp4" type="video/mp4">
-              </video>
-              <p>Zigzag Motion</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AI01_008_ALL_cameras__Collection_Animation_11_mixamo__Character_Empty11_1__GenCam_arc_Cam7_UIDdb56c51a/start40_repeat_next.mp4" type="video/mp4">
-              </video>
-              <p>Slow Motion</p>
-            </div>
-          </div>
-          <div class="dataset-example-row">
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AI11_003_ALL_cameras__Collection_Animation_11_mixamo__Character_Empty11_1__GenCam_arc_up_down_Cam2_UID466f4be0/forward.mp4" type="video/mp4">
-              </video>
-              <p>Forward</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AI11_003_ALL_cameras__Collection_Animation_11_mixamo__Character_Empty11_1__GenCam_arc_up_down_Cam2_UID466f4be0/fixed_10.mp4" type="video/mp4">
-              </video>
-              <p>Fixed at Frame 10</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AI11_003_ALL_cameras__Collection_Animation_11_mixamo__Character_Empty11_1__GenCam_arc_up_down_Cam2_UID466f4be0/reverse.mp4" type="video/mp4">
-              </video>
-              <p>Reverse</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AI11_003_ALL_cameras__Collection_Animation_11_mixamo__Character_Empty11_1__GenCam_arc_up_down_Cam2_UID466f4be0/bounce_40.mp4" type="video/mp4">
-              </video>
-              <p>Zigzag Motion</p>
-            </div>
-            <div class="video-item">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="SAT_GT_moved_cam/AI11_003_ALL_cameras__Collection_Animation_11_mixamo__Character_Empty11_1__GenCam_arc_up_down_Cam2_UID466f4be0/start40_repeat_next.mp4" type="video/mp4">
-              </video>
-              <p>Slow Motion</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="ar-demos" class="section">
@@ -882,11 +780,13 @@
   <div id="bibtex-section" class="bibtex-section collapsed">
     <div class="bibtex-container">
       <h3>BibTeX</h3>
-      <pre id="bibtex-content"><code>@article{huang2025spacetimpilot,
-  title={SpaceTimePilot: Generative Rendering of Dynamic Scenes Across Space and Time},
-  author={Huang, Zhening and Jeong, Hyeonho and Chen, Xuelin and Gryaditskaya, Yulia and Wang, Tuanfeng Y. and Lasenby, Joan and Huang, Chun-Hao},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2025}
+      <pre id="bibtex-content"><code>@misc{huang2025spacetimepilotgenerativerenderingdynamic,
+      title={SpaceTimePilot: Generative Rendering of Dynamic Scenes Across Space and Time}, 
+      author={Zhening Huang and Hyeonho Jeong and Xuelin Chen and Yulia Gryaditskaya and Tuanfeng Y. Wang and Joan Lasenby and Chun-Hao Huang},
+      year={2025},
+      eprint={2512.25075},
+      archivePrefix={arXiv},
+      url={https://arxiv.org/abs/2512.25075}, 
 }</code></pre>
       <button class="copy-bibtex-btn" onclick="copyBibtex()">Copy BibTeX</button>
     </div>

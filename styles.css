@@ -724,6 +724,34 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.dataset-cta {
+  font-weight: 500;
+}
+
+.dataset-cta a {
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 1px solid #2563eb;
+}
+
+.dataset-cta a:hover {
+  color: #1d4ed8;
+  border-bottom-color: #1d4ed8;
+}
+
+.dataset-overview-video {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.dataset-overview-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
 .dataset-general-example {
   margin-bottom: 3rem;
   text-align: center;

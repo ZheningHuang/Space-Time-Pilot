@@ -18,7 +18,7 @@
         <li><a href="#youtube-video">Video</a></li>
         <li><a href="#demos">Results</a></li>
         <li><a href="#methods">Methods</a></li>
-        <li><a href="#dataset">Dataset</a></li>
+        <li><a href="https://zheninghuang.github.io/camxtime_dataset/" target="_blank" rel="noopener">Dataset</a></li>
         <li><a href="#ar-demos">AR Demos</a></li>
       </ul>
     </div>
@@ -47,7 +47,7 @@
       <a href="https://github.com/ZheningHuang/SpaceTimePilot" class="header-link" id="code-link" target="_blank">Code</a>
       <a href="#youtube-video" class="header-link" id="video-link">Video</a>
       <button class="header-link" id="bibtex-btn" onclick="toggleBibtex()">BibTeX</button>
-      <a href="#" class="header-link upcoming" id="dataset-link" target="_blank">Dataset <span class="upcoming-badge">Upcoming</span></a>
+      <a href="https://zheninghuang.github.io/camxtime_dataset/" class="header-link" id="dataset-link" target="_blank" rel="noopener">Dataset</a>
     </div>
     <div class="hero-media">
       <video id="heroVideo" autoplay playsinline controls preload="auto">
@@ -327,44 +327,18 @@
     </section>
 
     <section id="dataset" class="section">
-      <h2>Cam×Time Dataset</h2>
-      <p class="section-intro">
-        To further strengthen disentanglement, we introduce a new dataset that spans the full grid of camera–time combinations along a trajectory. Our synthetic Cam×Time dataset contains 180K videos rendered from 1,000 animations across 100 scenes and three camera paths. Each path provides full-motion sequences for every camera pose, yielding dense multi-view and full-temporal coverage. This rich supervision enables effective disentanglement of spatial and temporal control.
+      <h2><a href="https://zheninghuang.github.io/camxtime_dataset/" target="_blank" rel="noopener">Cam×Time Dataset</a></h2>
+
+      <div class="dataset-overview-video">
+        <video controls loop playsinline preload="metadata">
+          <source src="twitter_linkedin_video.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <p class="section-intro dataset-cta">
+        Visit the dataset page →
+        <a href="https://zheninghuang.github.io/camxtime_dataset/" target="_blank" rel="noopener">zheninghuang.github.io/camxtime_dataset</a>
       </p>
-
-      <div class="dataset-general-example">
-        <h3>General Example</h3>
-        <p>This is how our dataset looks like:</p>
-        <div class="dataset-example-video">
-          <video autoplay loop muted playsinline>
-            <source src="assets/videos/all_8_videos_4x2_grid.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <div class="dataset-comparison">
-        <h3>Full-Grid Rendering</h3>
-        <div class="comparison-container">
-          <div class="comparison-left">
-            <video autoplay loop muted playsinline>
-              <source src="assets/videos/merged_05.mp4" type="video/mp4">
-            </video>
-            <p class="comparison-label">Original Video</p>
-          </div>
-          <div class="comparison-arrow">
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 30 L40 30 M35 25 L40 30 L35 35" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="comparison-right">
-            <video autoplay loop muted playsinline preload="metadata">
-              <source src="assets/videos/grid_all_cam.mp4" type="video/mp4">
-            </video>
-            <p class="comparison-label">Full-Grid Rendering</p>
-            <p class="comparison-note">We do this for all captured animations.</p>
-          </div>
-        </div>
-      </div>
 
     </section>
 
@@ -422,7 +396,7 @@
       <h3>BibTeX</h3>
       <pre id="bibtex-content"><code>@inproceedings{huang2026spacetimepilot,
       title={SpaceTimePilot: Generative Rendering of Dynamic Scenes Across Space and Time},
-      author={Huang, Zhening and Jeong, Hyeonho and Chen, Xuelin and Gryaditskaya, Yulia and Wang, Tuanfeng Y. and Lasenby, Joan and Huang, Chun-Hao},
+      author={Zhening Huang and Hyeonho Jeong and Xuelin Chen and Yulia Gryaditskaya and Tuanfeng Y. Wang and Joan Lasenby and Chun-Hao Huang},
       booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
       year={2026},
 }</code></pre>
